@@ -5,10 +5,10 @@ favorite_language = {
     'alex': 'python',
 }
 
-if 'alice' not in favorite_language.leys():
+if 'alice' not in favorite_language.keys():
     print("Alice, please take our poll!")
 
-for name in sorted(favorite_language.key()):
+for name in sorted(favorite_language.keys()):
     print(f"{name.title()}, thank you for taking the poll.")
 
 print("\nThe following languages have been mentioned:")
@@ -16,5 +16,5 @@ for language in favorite_language.values():
     print(language.title())
 
 print("\n include set")
-for language in set(favorite_language.values()):
+for language in sorted(set(favorite_language.values())):
     print(language.title())
