@@ -15,6 +15,6 @@ print("\nThe following languages have been mentioned:")
 for language in favorite_language.values():
     print(language.title())
 
-print("include set")
+print("\ninclude set")
 for language in sorted(set(favorite_language.values())):
     print(language.title())
