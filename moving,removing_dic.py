@@ -21,3 +21,47 @@ while unconfirmed_users:
 print("\nThe following user have been confirmed:")
 for confirmed in confirmed_users:
     print(confirmed.title())
+
+
+
+#remove all instances of the specific values from the list
+
+print("\n Remove specific values from a list")
+
+#list                   value
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+
+while 'cat' in pets:
+    pets.remove('cat')
+
+print(pets)
+
+
+#filling a dictionary with User Input
+
+print("Filling a Dictionary with User Input")
+
+response = {}
+
+#Set a flag to indicate that polling is active. 
+polling_active = True
+
+while polling_active:
+    #Prompt for the person's name and response. 
+    name = input("\nWhat is your name? ")
+    mountain = input("What mountain would you like to climb someday? ")
+
+    #Store the answer in the dictionary. 
+    response[name] = mountain
+
+    # Find out if anyone else is going to take the poll. 
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat == 'no':
+        polling_active = False
+    
+#Polling is complete. Show the result. 
+print("\n ---- Poll Results ---- ")
+for name, mountain in response.items():
+    print(f"{name} would like to climb {mountain}.")
+
