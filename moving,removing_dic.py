@@ -34,7 +34,7 @@ while 'cat' in pets:
     pets.remove('cat')
 
 print(pets)
-
+# fast remove O(1), the value(frequency) shows the key(the animal type) is more than one(duplicate)
 print("\n dictionary for a fast lookups no duplicate")
 
 pets = {
@@ -44,10 +44,13 @@ pets = {
     'rabbit': 1
 }
 
-pets.pop('cat') # or del pets['cat']
+pet_counts = {}
 
-for pet_type, num in pets.items():
-    print(f"{num} {pet_type}")
+for animal in pets:
+    if animal in pet_counts:
+        pet_counts[animal] += 1
+    else:
+        pet_counts[animal] = 1
 
 print("\nFilling a Dictionary with User Input")
 
