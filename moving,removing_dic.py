@@ -24,11 +24,9 @@ for confirmed in confirmed_users:
 
 
 
-#remove all instances of the specific values from the list
-
 print("\n Remove specific values from a list")
 
-#list                   value
+#list of values, we assign from right side(temporary) to a variable to perist. 
 pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
 print(pets)
 
@@ -37,10 +35,21 @@ while 'cat' in pets:
 
 print(pets)
 
+print("\n dictionary for a fast lookups no duplicate")
 
-#filling a dictionary with User Input
+pets = {
+    'dog': 2,
+    'cat': 3,
+    'goldfish': 1,
+    'rabbit': 1
+}
 
-print("Filling a Dictionary with User Input")
+pets.pop('cat') # or del pets['cat']
+
+for pet_type, num in pets.items():
+    print(f"{num} {pet_type}")
+
+print("\nFilling a Dictionary with User Input")
 
 response = {}
 
@@ -60,7 +69,6 @@ while polling_active:
     if repeat == 'no':
         polling_active = False
     
-#Polling is complete. Show the result. 
 print("\n ---- Poll Results ---- ")
 for name, mountain in response.items():
     print(f"{name} would like to climb {mountain}.")
